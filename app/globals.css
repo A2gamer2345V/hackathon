@@ -1,0 +1,395 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   ElderEase design tokens
+   A calm, warm healthcare palette: cream paper, sage green as the primary
+   voice, lavender reserved for AI-assisted features, and muted clay/sun/sky
+   accents for activity categories. No gradients, no neon, no glass.
+   ========================================================================== */
+
+:root {
+  /* Brand — sampled from the ElderEase artwork. Used by the logo and wordmark
+     only, so the interface keeps the calmer sage palette below. */
+  --brand-blue: #1c5f86;
+  --brand-blue-deep: #164c6c;
+  --brand-green: #4f9e3f;
+  --brand-green-deep: #3f8232;
+
+  /* Surfaces */
+  --cream: #faf6ee;
+  --cream-deep: #f3ede1;
+  --surface: #fffdf9;
+  --surface-raised: #ffffff;
+  --surface-sunken: #f6f1e6;
+
+  /* Ink */
+  --ink: #24312b;
+  --ink-soft: #4c5a53;
+  --ink-muted: #6f7d76;
+  --ink-inverse: #fbfaf6;
+
+  /* Sage — primary */
+  --sage-50: #eef5f0;
+  --sage-100: #dcebe1;
+  --sage-200: #bcd8c6;
+  --sage-300: #93bfa4;
+  --sage-400: #6ba381;
+  --sage-500: #4f8a67;
+  --sage-600: #3d6f52;
+  --sage-700: #305741;
+  --sage-800: #274634;
+
+  /* Lavender — AI features only */
+  --lilac-50: #f2effa;
+  --lilac-100: #e6e0f6;
+  --lilac-200: #cec3ec;
+  --lilac-300: #ac9ade;
+  --lilac-400: #8f79cf;
+  --lilac-500: #7862bc;
+  --lilac-600: #614c9d;
+
+  /* Warm accents */
+  --clay-100: #f8e6dc;
+  --clay-300: #e2ab8d;
+  --clay-500: #c1764e;
+  --clay-600: #a05f3c;
+
+  --sun-100: #fbeed2;
+  --sun-300: #edc873;
+  --sun-500: #cf9d2c;
+  --sun-600: #a87d1d;
+
+  --sky-100: #dfecf3;
+  --sky-300: #9cc2d6;
+  --sky-500: #4d87a6;
+  --sky-600: #3a6b87;
+
+  --rose-100: #f8e2e8;
+  --rose-300: #dfa3b4;
+  --rose-500: #b76179;
+  --rose-600: #97495f;
+
+  /* Feedback */
+  --success: #3d6f52;
+  --success-soft: #dcebe1;
+  --warning: #a87d1d;
+  --warning-soft: #fbeed2;
+  --danger: #a8443c;
+  --danger-soft: #f7e0dd;
+
+  /* Lines & shadows — restrained, never heavy */
+  --line: #e6ddcd;
+  --line-strong: #d3c7b2;
+  --ring: var(--sage-500);
+  --shadow-soft: 0 1px 2px rgb(36 49 43 / 0.04), 0 6px 16px -8px rgb(36 49 43 / 0.10);
+  --shadow-lift: 0 2px 4px rgb(36 49 43 / 0.05), 0 14px 30px -14px rgb(36 49 43 / 0.16);
+
+  /* Radii */
+  --radius-card: 20px;
+  --radius-tile: 24px;
+  --radius-control: 14px;
+  --radius-pill: 999px;
+}
+
+@theme inline {
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-deep: var(--brand-blue-deep);
+  --color-brand-green: var(--brand-green);
+  --color-brand-green-deep: var(--brand-green-deep);
+
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-inverse: var(--ink-inverse);
+
+  --color-sage-50: var(--sage-50);
+  --color-sage-100: var(--sage-100);
+  --color-sage-200: var(--sage-200);
+  --color-sage-300: var(--sage-300);
+  --color-sage-400: var(--sage-400);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+  --color-sage-700: var(--sage-700);
+  --color-sage-800: var(--sage-800);
+
+  --color-lilac-50: var(--lilac-50);
+  --color-lilac-100: var(--lilac-100);
+  --color-lilac-200: var(--lilac-200);
+  --color-lilac-300: var(--lilac-300);
+  --color-lilac-400: var(--lilac-400);
+  --color-lilac-500: var(--lilac-500);
+  --color-lilac-600: var(--lilac-600);
+
+  --color-clay-100: var(--clay-100);
+  --color-clay-300: var(--clay-300);
+  --color-clay-500: var(--clay-500);
+  --color-clay-600: var(--clay-600);
+
+  --color-sun-100: var(--sun-100);
+  --color-sun-300: var(--sun-300);
+  --color-sun-500: var(--sun-500);
+  --color-sun-600: var(--sun-600);
+
+  --color-sky-100: var(--sky-100);
+  --color-sky-300: var(--sky-300);
+  --color-sky-500: var(--sky-500);
+  --color-sky-600: var(--sky-600);
+
+  --color-rose-100: var(--rose-100);
+  --color-rose-300: var(--rose-300);
+  --color-rose-500: var(--rose-500);
+  --color-rose-600: var(--rose-600);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+
+  --radius-card: var(--radius-card);
+  --radius-tile: var(--radius-tile);
+  --radius-control: var(--radius-control);
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-lift: var(--shadow-lift);
+
+  --font-sans: var(--font-nunito), var(--font-devanagari), var(--font-bengali), ui-sans-serif,
+    system-ui, sans-serif;
+  --font-display: var(--font-fraunces), var(--font-nunito), var(--font-devanagari),
+    var(--font-bengali), Georgia, serif;
+}
+
+/* ==========================================================================
+   Accessibility switches — driven by data attributes the app sets on <html>,
+   so the Settings screen genuinely changes the interface.
+   ========================================================================== */
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html[data-text-scale='large'] {
+  font-size: 112.5%;
+}
+
+html[data-text-scale='xlarge'] {
+  font-size: 125%;
+}
+
+html[data-contrast='high'] {
+  --brand-blue: #0f3f5c;
+  --brand-blue-deep: #0a2c41;
+  --brand-green: #2f6b24;
+  --brand-green-deep: #24521b;
+
+  --cream: #ffffff;
+  --cream-deep: #f2f2f2;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-sunken: #f0f0f0;
+
+  --ink: #000000;
+  --ink-soft: #16211c;
+  --ink-muted: #2c3a33;
+
+  --sage-100: #d3ecdb;
+  --sage-500: #1f5136;
+  --sage-600: #123a24;
+  --sage-700: #0d2b1b;
+
+  --lilac-500: #4b3591;
+  --lilac-600: #3a2775;
+
+  --line: #4a4a4a;
+  --line-strong: #1c1c1c;
+  --shadow-soft: 0 0 0 1px rgb(0 0 0 / 0.12);
+  --shadow-lift: 0 0 0 2px rgb(0 0 0 / 0.16);
+}
+
+html[data-contrast='high'] .card,
+html[data-contrast='high'] [data-surface] {
+  border-color: var(--line-strong);
+  border-width: 2px;
+}
+
+/* Reduced motion: both the user's OS setting and the in-app toggle. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html[data-motion='reduced'] *,
+html[data-motion='reduced'] *::before,
+html[data-motion='reduced'] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+* {
+  border-color: var(--line);
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100dvh;
+}
+
+/* A visible, generous focus ring everywhere — never remove the outline. */
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+html[data-contrast='high'] :focus-visible {
+  outline-width: 4px;
+  outline-color: #000000;
+}
+
+::selection {
+  background-color: var(--sage-200);
+  color: var(--ink);
+}
+
+/* Comfortable, non-clinical scrollbars. */
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+}
+
+/* ==========================================================================
+   Small utilities used across the app
+   ========================================================================== */
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  border-radius: var(--radius-control);
+  background-color: var(--sage-600);
+  color: var(--ink-inverse);
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* The companion points at things with this. Kept subtle and non-flashing. */
+@keyframes elderease-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgb(120 98 188 / 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgb(120 98 188 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(120 98 188 / 0);
+  }
+}
+
+[data-companion-highlight='true'] {
+  animation: elderease-pulse-ring 1.6s ease-out 2;
+  outline: 3px solid var(--lilac-400);
+  outline-offset: 4px;
+  border-radius: var(--radius-control);
+}
+
+@keyframes elderease-breathe {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.animate-breathe {
+  animation: elderease-breathe 4s ease-in-out infinite;
+}
+
+@keyframes elderease-wave {
+  0%,
+  60%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-16deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+}
+
+.animate-wave {
+  transform-origin: 70% 90%;
+  animation: elderease-wave 2.4s ease-in-out infinite;
+}
+
+@keyframes elderease-listen {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-listen-bar {
+  transform-origin: center;
+  animation: elderease-listen 900ms ease-in-out infinite;
+}
+
+/* Print: caregivers do print weekly summaries. */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff;
+  }
+}

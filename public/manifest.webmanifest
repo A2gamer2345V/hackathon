@@ -1,0 +1,46 @@
+{
+  "name": "ElderEase — Care, support, better days",
+  "short_name": "ElderEase",
+  "description": "A calm, multilingual companion for memory activities, daily plans and reminders, with an adaptive caregiver dashboard for the family.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#faf6ee",
+  "theme_color": "#faf6ee",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["health", "lifestyle", "medical"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "My Day", "url": "/app/my-day" },
+    { "name": "Reminders", "url": "/app/reminders" },
+    { "name": "Games", "url": "/app/games" }
+  ]
+}

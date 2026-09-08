@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Read(//d/Aman/hackathon/**)",
+      "Bash(npx --yes create-next-app@latest . --ts --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --turbopack --use-npm --yes)",
+      "Bash(python -)",
+      "Bash(node -e ' *)",
+      "Bash(npx tsc *)",
+      "Bash(grep -iE \"^sharp$|resvg|canvas|svg2|pngjs\")",
+      "Bash(npx next *)",
+      "Bash(npx eslint *)"
+    ]
+  }
+}
