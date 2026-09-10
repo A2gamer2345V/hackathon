@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="ElderEase">
+  <title>ElderEase</title>
+  <!-- Local asset only: no remote image URLs anywhere in the app. -->
+  <rect width="512" height="512" rx="112" fill="#faf6ee" />
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="none" stroke="#dfe7d8" stroke-width="8" />
+
+  <!-- A roof cradled by two cupped hands: a home held, not a clinic. -->
+  <g transform="translate(69.5 69.5) scale(7.77)" fill="none">
+    <path
+      d="M6.5 22.5 24 7.5 41.5 22.5"
+      stroke="#1c5f86"
+      stroke-width="3.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path d="M34.5 18.2V9.8" stroke="#1c5f86" stroke-width="3.6" stroke-linecap="round" />
+    <g fill="#4f9e3f">
+      <rect x="19.7" y="15.4" width="3.6" height="3.6" rx="0.9" />
+      <rect x="24.7" y="15.4" width="3.6" height="3.6" rx="0.9" />
+      <rect x="19.7" y="20.2" width="3.6" height="3.6" rx="0.9" />
+      <rect x="24.7" y="20.2" width="3.6" height="3.6" rx="0.9" />
+    </g>
+    <path
+      d="M10.5 26.5c-2.4 7.6 2.2 15 13.5 16.1"
+      stroke="#1c5f86"
+      stroke-width="5.2"
+      stroke-linecap="round"
+    />
+    <path
+      d="M37.5 26.5c2.4 7.6-2.2 15-13.5 16.1"
+      stroke="#4f9e3f"
+      stroke-width="5.2"
+      stroke-linecap="round"
+    />
+  </g>
+</svg>
